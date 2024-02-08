@@ -1,7 +1,6 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { TagProps } from "./Tag.types";
 
-// Définition des styles par défaut pour le Tag
 const tagDefaultStyles = {
   display: "inline-flex",
   padding: "4px 8px",
@@ -19,7 +18,6 @@ type TagTypes = {
   };
 };
 
-// Définition des types de tag avec leurs styles associés
 const tagTypes: TagTypes = {
   IN_CIRCULATION: {
     backgroundColor: "#3abbb366",
@@ -44,17 +42,13 @@ const tagTypes: TagTypes = {
 };
 
 const Tag: FC<TagProps> = ({ type }) => {
-  // Récupération des styles spécifiques au type de tag
   const tagStyle = {
     ...tagDefaultStyles,
-    backgroundColor: tagTypes[type]?.backgroundColor || "#fff", // Utilisation de la couleur par défaut si le type n'est pas trouvé
+    backgroundColor: tagTypes[type]?.backgroundColor || "#fff",
   };
 
   return (
-    <span style={tagStyle}>
-      {tagTypes[type]?.text || "Type inconnu"}{" "}
-      {/* Utilisation d'un texte par défaut si le type n'est pas trouvé */}
-    </span>
+    <span style={tagStyle}>{tagTypes[type]?.text || "Type inconnu"} </span>
   );
 };
 
