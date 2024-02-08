@@ -17,12 +17,12 @@ const iconSizes = {
 };
 
 const Icon: FC<IconProps> = ({ size, style, iconName, altText }) => {
-  // Récupérer l'image en fonction du nom de l'icône
-  const iconPath = "/reulib/src/icons/" + iconName + ".svg";
   const iconStyles = {
     ...iconSizes[size || "small"],
     ...style,
   };
+
+  const iconPath = "/icons/" + iconName + ".svg";
   return <img src={iconPath} alt={altText || iconName} style={iconStyles} />;
 };
 
