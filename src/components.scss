@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
 
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Colors */
 :root {
   --primary: #3f0fc8;
@@ -89,7 +95,16 @@ h3 {
 .columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 0px;
+}
+
+/* Menu */
+.menuText {
+  color: var(--Mine-Shaft, #363636);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }

@@ -1,0 +1,19 @@
+// If the element is selected, it will have a different background color
+#sidebar a.active {
+  border-radius: 8px;
+  background: rgba(69, 10, 208, 0.1);
+  span {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+// By default
+#sidebar a {
+  span {
+    img {
+      opacity: 50%;
+    }
+  }
+}
