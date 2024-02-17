@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { LightButtonProps } from "./LightButton.types";
-import { Icon } from "../Icon";
+import { Icon } from "../../Icon";
 const buttonDefaultStyles = {
   display: "flex",
   width: "280px",
